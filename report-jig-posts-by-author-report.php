@@ -8,7 +8,7 @@ class PostsByAuthorReport extends Report
 {
     public function buildBaseQuery()
     {
-       $query = DB::table('users')
+       return DB::table('users')
             ->select([
                 'users.name',
                 DB::raw('COUNT(disinct posts.id) as number_of_posts'),
